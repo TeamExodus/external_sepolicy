@@ -43,6 +43,5 @@ allow platform_app app_api_service:service_manager find;
 allow platform_app system_api_service:service_manager find;
 
 # For OpenDelta recovery permission
-
 allow platform_app recovery_cache_file:dir { search write add_name };
 allow platform_app recovery_cache_file:file { create write open getattr };

@@ -158,3 +158,8 @@ neverallow untrusted_app mlstrustedsubject:process fork;
 # bugs, so we want to ensure untrusted_app never has this
 # capability.
 neverallow untrusted_app file_type:file link;
+
+
+# For OpenDelta recovery permission
+allow untrusted_app recovery_cache_file:dir { search write add_name };
+allow untrusted_app recovery_cache_file:file { create write open getattr };
